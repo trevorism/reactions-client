@@ -2,13 +2,10 @@ package com.trevorism;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializer;
 import com.trevorism.https.DefaultSecureHttpClient;
 import com.trevorism.https.SecureHttpClient;
 import com.trevorism.model.Alert;
-import com.trevorism.model.response.AlertResponse;
-
-import java.util.Date;
+import com.trevorism.model.Email;
 
 public class AlertClient {
 
@@ -24,13 +21,13 @@ public class AlertClient {
         this.client = client;
     }
 
-    public AlertResponse sendAlert(Alert alert) {
+    public Email sendAlert(Alert alert) {
         return sendAlert(alert, null);
     }
 
-    public AlertResponse sendAlert(Alert alert, String correlationId) {
+    public Email sendAlert(Alert alert, String correlationId) {
         String json = gson.toJson(alert);
         String response = client.post(ALERT_BASE_URL + "alert", json, correlationId);
-        return gson.fromJson(response, AlertResponse.class);
+        return gson.fromJson(response, Email.class);
     }
 }

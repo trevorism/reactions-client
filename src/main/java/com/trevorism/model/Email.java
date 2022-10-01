@@ -1,8 +1,8 @@
-package com.trevorism.model.response;
+package com.trevorism.model;
 
 import java.util.List;
 
-public class AlertResponse {
+public class Email {
 
     private String subject;
     private List<String> recipients;
