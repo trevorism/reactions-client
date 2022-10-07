@@ -9,7 +9,7 @@ import com.trevorism.model.Email;
 
 public class AlertClient {
 
-    public static final String ALERT_BASE_URL = "https://alert.datastore.trevorism.com/";
+    public static final String ALERT_BASE_URL = "https://alert.action.trevorism.com/";
     private final SecureHttpClient client;
     private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").create();
 
