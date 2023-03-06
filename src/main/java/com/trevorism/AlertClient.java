@@ -2,7 +2,7 @@ package com.trevorism;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.trevorism.https.DefaultSecureHttpClient;
+import com.trevorism.http.HttpClient;
 import com.trevorism.https.SecureHttpClient;
 import com.trevorism.model.Alert;
 import com.trevorism.model.Email;
@@ -14,7 +14,7 @@ public class AlertClient {
     private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").create();
 
     public AlertClient() {
-        this(new DefaultSecureHttpClient());
+        this(SecureHttpClientProvider.get());
     }
 
     public AlertClient(SecureHttpClient client) {

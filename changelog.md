@@ -1,3 +1,11 @@
+# 0.4.0
+
+Improve clients by creating a singleton provider
+
+# 0.3.0
+
+Move apis to actions from datastore
+
 # 0.2.0
 
 Add emailing capability

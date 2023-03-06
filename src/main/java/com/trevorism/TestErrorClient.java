@@ -3,7 +3,7 @@ package com.trevorism;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
-import com.trevorism.https.DefaultSecureHttpClient;
+import com.trevorism.http.HttpClient;
 import com.trevorism.https.SecureHttpClient;
 import com.trevorism.model.TestError;
 import com.trevorism.model.response.TestErrorResponse;
@@ -19,7 +19,7 @@ public class TestErrorClient {
             .setDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").create();
 
     public TestErrorClient() {
-        this(new DefaultSecureHttpClient());
+        this(SecureHttpClientProvider.get());
     }
 
     public TestErrorClient(SecureHttpClient client) {
