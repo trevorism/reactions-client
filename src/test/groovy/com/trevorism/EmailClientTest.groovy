@@ -8,7 +8,7 @@ class EmailClientTest {
 
     @Test
     void testEmail() {
-        EmailClient client = new EmailClient([post: { x, y, z -> "{}" }] as SecureHttpClient)
+        EmailClient client = new EmailClient([post: { x, y -> "{}" }] as SecureHttpClient)
         assert client.sendEmail(new Email([subject: "unit test", body: "test4", recipients: ["trevorism@gmail.com"]]))
     }
 }

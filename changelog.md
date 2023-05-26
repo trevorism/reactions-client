@@ -1,3 +1,7 @@
+# 0.5.0
+
+Remove the singleton provider concept. Clients must inject an implementation.
+
 # 0.4.0
 
 Improve clients by creating a singleton provider

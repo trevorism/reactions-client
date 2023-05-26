@@ -9,7 +9,7 @@ class AlertClientTest {
 
     @Test
     void testAlert() {
-        AlertClient client = new AlertClient([post: { x, y, z -> "{}" }] as SecureHttpClient)
+        AlertClient client = new AlertClient([post: { x, y -> "{}" }] as SecureHttpClient)
         assert client.sendAlert(new Alert([subject: "unit test", body: "test2"]))
     }
 
