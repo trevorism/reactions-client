@@ -1,3 +1,7 @@
+# 0.6.0
+
+Fix date handling from the testing api
+
 # 0.5.0
 
 Remove the singleton provider concept. Clients must inject an implementation.
